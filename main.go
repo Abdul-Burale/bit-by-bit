@@ -23,6 +23,7 @@ func main() {
 		log.Fatalf("Error initalizing Firebase: %v", err)
 	}
 
-	http.HandleFunc("/", api.HelloWorld)
+	http.HandleFunc("/", api.HellWorld)
+	http.HandleFunc("/add-business", api.AddBusiness)
 	http.ListenAndServe(":8080", nil)
 }
